@@ -404,7 +404,7 @@ func (d *Driver) newDevice(name string, protocols map[string]models.ProtocolProp
 
 	rtspUri := &url.URL{
 		Scheme: RtspUriScheme,
-		Host:   d.rtspHostName + d.rtspTcpPort,
+		Host:  fmt.Sprintf("%s:%s",d.rtspHostName,d.rtspTcpPort),
 	}
 	rtspUri.Path = path.Join(Stream, name)
 
