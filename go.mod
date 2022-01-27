@@ -1,4 +1,4 @@
-module github.com/IOTechSystems/device-usb-camera
+module github.com/edgexfoundry/device-usb-camera
 
 go 1.16
 

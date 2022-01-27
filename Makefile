@@ -11,7 +11,7 @@ MICROSERVICES=cmd/device-usb-camera
 VERSION=$(shell cat ./VERSION 2>/dev/null || echo 0.0.0)
 
 GIT_SHA=$(shell git rev-parse HEAD)
-GOFLAGS=-ldflags "-X github.com/IOTechSystems/device-usb-camera.Version=$(VERSION)"
+GOFLAGS=-ldflags "-X github.com/edgexfoundry/device-usb-camera.Version=$(VERSION)"
 
 ARCH=$(shell uname -m)
 
@@ -23,8 +23,8 @@ cmd/device-usb-camera:
 docker:
 	docker build . \
 		--label "git_sha=$(GIT_SHA)" \
-		-t iotechsystems/device-usb-camera:$(GIT_SHA) \
-		-t iotechsystems/device-usb-camera:$(VERSION)-dev
+		-t edgexfoundry/device-usb-camera:$(GIT_SHA) \
+		-t edgexfoundry/device-usb-camera:$(VERSION)-dev
 
 tidy:
 	go mod tidy

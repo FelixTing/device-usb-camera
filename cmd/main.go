@@ -7,9 +7,9 @@
 package main
 
 import (
-	deviceUsbCamera "github.com/IOTechSystems/device-usb-camera"
-	"github.com/IOTechSystems/device-usb-camera/internal/driver"
 	"github.com/edgexfoundry/device-sdk-go/v2/pkg/startup"
+	deviceUsbCamera "github.com/edgexfoundry/device-usb-camera"
+	"github.com/edgexfoundry/device-usb-camera/internal/driver"
 )
 
 const (

@@ -19,7 +19,7 @@ FROM ${BASE} AS builder
 
 ARG MAKE="make build"
 ARG ALPINE_PKG_BASE="make git gcc libc-dev zeromq-dev libsodium-dev"
-ARG ALPINE_PKG_EXTRA=""
+ARG ALPINE_PKG_EXTRA="v4l-utils-dev v4l-utils v4l-utils-libs linux-headers"
 
 LABEL name=edgex-device-usb-camera
 
