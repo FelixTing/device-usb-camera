@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ARG BASE=golang:1.16-alpine3.14
+ARG BASE=golang:1.17-alpine3.15
 FROM ${BASE} AS builder
 
 ARG MAKE="make build"
@@ -38,7 +38,7 @@ RUN ${MAKE}
 
 FROM aler9/rtsp-simple-server AS rtsp
 
-FROM alpine:3.14
+FROM alpine:3.15
 
 # dumb-init needed for injected secure bootstrapping entrypoint script when run in secure mode.
 RUN apk add --update --no-cache zeromq dumb-init ffmpeg udev
