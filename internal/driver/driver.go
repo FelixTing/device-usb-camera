@@ -261,10 +261,10 @@ func (d *Driver) Stop(force bool) error {
 	defer d.wg.Wait()
 
 	for _, device := range d.activeDevices {
-		go func() {
+		go func(device *Device) {
 			device.StopStreaming()
 			d.wg.Done()
-		}()
+		}(device)
 	}
 	return nil
 }
